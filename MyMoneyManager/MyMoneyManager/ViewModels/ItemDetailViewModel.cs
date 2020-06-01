@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 using MyMoneyManager.Models;
 
 namespace MyMoneyManager.ViewModels

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MyMoneyManager.Models
+﻿namespace MyMoneyManager.Models
 {
     public class Item
     {

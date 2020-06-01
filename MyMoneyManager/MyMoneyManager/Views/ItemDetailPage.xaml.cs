@@ -1,10 +1,7 @@
-﻿using System;
+﻿using MyMoneyManager.Models;
+using MyMoneyManager.ViewModels;
 using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-using MyMoneyManager.Models;
-using MyMoneyManager.ViewModels;
 
 namespace MyMoneyManager.Views
 {

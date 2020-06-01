@@ -1,12 +1,10 @@
-﻿using System;
+﻿using MyMoneyManager.Models;
+using MyMoneyManager.Views;
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
-
-using MyMoneyManager.Models;
-using MyMoneyManager.Views;
 
 namespace MyMoneyManager.ViewModels
 {
@@ -25,7 +23,7 @@ namespace MyMoneyManager.ViewModels
             {
                 var newItem = item as Item;
                 Items.Add(newItem);
-                await DataStore.AddItemAsync(newItem);
+                //await DataStore.AddItemAsync(newItem);
             });
         }
 
@@ -36,11 +34,11 @@ namespace MyMoneyManager.ViewModels
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
-                foreach (var item in items)
-                {
-                    Items.Add(item);
-                }
+                //var items = await DataStore.GetItemsAsync(true);
+                //foreach (var item in items)
+                //{
+                //    Items.Add(item);
+                //}
             }
             catch (Exception ex)
             {
