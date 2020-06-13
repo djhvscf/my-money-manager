@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D113D02F-EAC4-47B7-9259-045554F09CCA}</ProjectGuid>
+    <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ExpenseAnalysis.MacOS</RootNamespace>
+    <AssemblyName>ExpenseAnalysis.macOS</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <CreatePackage>false</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <HttpClientHandler>
+    </HttpClientHandler>
+    <LinkMode>SdkOnly</LinkMode>
+    <XamMacArch>
+    </XamMacArch>
+    <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
+    <AOTMode>None</AOTMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>true</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <LinkMode>SdkOnly</LinkMode>
+    <HttpClientHandler>
+    </HttpClientHandler>
+    <XamMacArch>
+    </XamMacArch>
+    <AOTMode>None</AOTMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+    <PackageReference Include="Microsoft.NETCore.Platforms" Version="3.1.1" />
+    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.0.3" />
+    <PackageReference Include="SQLitePCLRaw.core" Version="2.0.3" />
+    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.osx" Version="1.1.14" />
+    <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3.macos" Version="1.1.14" />
+    <PackageReference Include="SQLitePCLRaw.provider.sqlite3.macos" Version="1.1.14" />
+    <PackageReference Include="Syncfusion.Licensing" Version="18.1.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="18.1.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.GridCommon" Version="18.1.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="18.1.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataForm" Version="18.1.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="18.1.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="18.1.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="18.1.0.56" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-128.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-128%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-16.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-16%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-256%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-32.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-32%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-512%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Mac" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="FileHelper.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\CustomListViewRenderer.cs" />
+    <Compile Include="Renderer\CustomMasterDetailRenderer.cs" />
+    <Compile Include="Renderer\CustomButtonRenderer.cs" />
+    <Compile Include="Renderer\CustomDatePickerRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Resources\SplashScreen.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExpenseAnalysis\ExpenseAnalysis.csproj">
+      <Project>{B0B25CE3-0BD0-49CC-BCE4-49260106218A}</Project>
+      <Name>ExpenseAnalysis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\auto.png">
+      <Link>Resources\auto.png</Link>
+    </BundleResource>
+    <BundleResource Include="Resources\burgericon.png" />
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\charity.png">
+      <Link>Resources\charity.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\creditcard.png">
+      <Link>Resources\creditcard.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\date.png">
+      <Link>Resources\date.png</Link>
+    </BundleResource>
+    <BundleResource Include="Resources\Default-Portrait - 768 x 1024.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x - 1536 x 2048.png" />
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\dollar.png">
+      <Link>Resources\dollar.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\education.png">
+      <Link>Resources\education.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\entertainment.png">
+      <Link>Resources\entertainment.png</Link>
+    </BundleResource>
+    <BundleResource Include="Resources\filter.png" />
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\food.png">
+      <Link>Resources\food.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\gadgets.png">
+      <Link>Resources\gadgets.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\health.png">
+      <Link>Resources\health.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\home.png">
+      <Link>Resources\home.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\housingloan.png">
+      <Link>Resources\housingloan.png</Link>
+    </BundleResource>
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-60%403x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon-Small%403x.png" />
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\mobilebill.png">
+      <Link>Resources\mobilebill.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\pen.png">
+      <Link>Resources\pen.png</Link>
+    </BundleResource>
+    <BundleResource Include="Resources\plus.png" />
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\selectCategory.png">
+      <Link>Resources\selectCategory.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\shopping.png">
+      <Link>Resources\shopping.png</Link>
+    </BundleResource>
+    <BundleResource Include="Resources\Splash.png" />
+    <BundleResource Include="Resources\Splash%402x.png" />
+    <BundleResource Include="Resources\Splash%403x.png" />
+    <BundleResource Include="Resources\Splash~ipad.png" />
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\userImage.png">
+      <Link>Resources\userImage.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\ExpenseAnalysis.Droid\Resources\drawable\utilities.png">
+      <Link>Resources\utilities.png</Link>
+    </BundleResource>
+    <BundleResource Include="Resources\tick.png" />
+    <BundleResource Include="Resources\user.png" />
+    <BundleResource Include="Resources\category.png" />
+    <BundleResource Include="Resources\message.png" />
+    <BundleResource Include="Resources\trend.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+</Project>
