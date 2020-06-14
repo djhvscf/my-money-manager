@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ExpenseAnalysis.CategoryBudgetPage" xmlns:local="clr-namespace:ExpenseAnalysis;assembly=ExpenseAnalysis"
-             xmlns:sfDataGrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
-             Title ="Category/Budget" >
+<ContentPage
+    x:Class="ExpenseAnalysis.CategoryBudgetPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ExpenseAnalysis;assembly=ExpenseAnalysis"
+    xmlns:sfDataGrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+    Title="Category/Budget">
     <ContentPage.BindingContext>
-        <local:CategoryBudgetPageViewModel/>
+        <local:CategoryBudgetPageViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -13,13 +15,24 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <sfDataGrid:SfDataGrid ItemsSource="{Binding Categories}" AllowEditing="False" ColumnSizer="Star"
-                             AutoGenerateColumns="False"  VerticalOptions="FillAndExpand">
+        <sfDataGrid:SfDataGrid
+            AllowEditing="False"
+            AutoGenerateColumns="False"
+            ColumnSizer="Star"
+            ItemsSource="{Binding Categories}"
+            VerticalOptions="FillAndExpand">
             <sfDataGrid:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
                 <sfDataGrid:GridTemplateColumn x:Name="CategoryColumn" MappingName="StockChange">
                     <sfDataGrid:GridTemplateColumn.HeaderTemplate>
                         <DataTemplate>
-                            <Label Text="Category" TextColor="Black" FontAttributes="Bold" BackgroundColor="#f8f9fa" Margin="10,0,0,0" XAlign="Start" YAlign="Center"/>
+                            <Label
+                                Margin="10,0,0,0"
+                                BackgroundColor="#f8f9fa"
+                                FontAttributes="Bold"
+                                Text="Category"
+                                TextColor="Black"
+                                XAlign="Start"
+                                YAlign="Center" />
                         </DataTemplate>
                     </sfDataGrid:GridTemplateColumn.HeaderTemplate>
                     <sfDataGrid:GridTemplateColumn.CellTemplate>
@@ -29,17 +42,31 @@
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Image Grid.Column="0" Source="{Binding Name, Converter = {StaticResource ImageConverter}}" HeightRequest="30" WidthRequest="30" Margin="10,10,0,10" />
-                                <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" YAlign="Center">
-                                </Label>
+                                <Image
+                                    Grid.Column="0"
+                                    Margin="10,10,0,10"
+                                    HeightRequest="30"
+                                    Source="{Binding Name, Converter={StaticResource ImageConverter}}"
+                                    WidthRequest="30" />
+                                <Label
+                                    Grid.Column="1"
+                                    Text="{Binding Name}"
+                                    TextColor="Black"
+                                    YAlign="Center" />
                             </Grid>
                         </DataTemplate>
                     </sfDataGrid:GridTemplateColumn.CellTemplate>
                 </sfDataGrid:GridTemplateColumn>
-                <sfDataGrid:GridTextColumn  LoadUIView ="True" MappingName="Budget">
+                <sfDataGrid:GridTextColumn LoadUIView="True" MappingName="Budget">
                     <sfDataGrid:GridTextColumn.HeaderTemplate>
                         <DataTemplate>
-                            <Label Text="Budget" TextColor="Black" FontAttributes="Bold" BackgroundColor="#f8f9fa" XAlign="Center" YAlign="Center"/>
+                            <Label
+                                BackgroundColor="#f8f9fa"
+                                FontAttributes="Bold"
+                                Text="Budget"
+                                TextColor="Black"
+                                XAlign="Center"
+                                YAlign="Center" />
                         </DataTemplate>
                     </sfDataGrid:GridTextColumn.HeaderTemplate>
                 </sfDataGrid:GridTextColumn>
